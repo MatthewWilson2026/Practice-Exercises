@@ -1,0 +1,28 @@
+def checkNums():
+    
+    output = ""
+    
+    num1 = int(input("Input a number: "))
+    num2 = int(input("Input another number: "))
+    
+    if num1 % 2 == 0:
+        output += str(num1) + " is even. "
+       
+    else:
+        output += str(num1) + " is odd. "
+        
+    if num1 % 4 == 0:
+        output += str(num1) + " is divisible by four. "
+        
+    else:
+        output += str(num1) + " is not divisible by four. "
+        
+    if num1 % num2 == 0:
+        output += str(num2) + " is a factor of " + str(num1)+ ". "
+        
+    else:
+        output += str(num2) + " is not a factor of " + str(num1)+ ". "
+        
+    print(output)
+    
+checkNums()
