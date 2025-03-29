@@ -1,0 +1,13 @@
+list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+def printNewList(list):
+      
+    newList = []
+    inputNum = int(input("Input a number: "))
+      
+    for i in range(len(list)):
+        if list[i] < inputNum:
+            newList.append(list[i])
+        
+    print(newList)
+          
+printNewList(list1)
