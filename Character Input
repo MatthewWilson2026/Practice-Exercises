@@ -1,0 +1,14 @@
+def getUserInfo():
+    
+    currentYear = 2025
+    
+    userName = input("What is your name? ")
+    userAge = int(input("How old are you? "))
+    timesToPrint = int(input("How many times should I print? "))
+    
+    yearToTurn100 = str(100 - userAge + currentYear)
+    
+    for i in range(timesToPrint):
+        print("Your name is {0} and you will turn 100 in the year {1}".format(userName, yearToTurn100))
+    
+getUserInfo()
