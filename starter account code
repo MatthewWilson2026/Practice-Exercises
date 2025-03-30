@@ -1,0 +1,33 @@
+class user:
+    def __init__(self, name, pin, data):
+        self.name = name
+        self.pin = pin
+        self.data = data
+        
+users = [
+    user("Jake", 123, 5),
+    user("Mike", 456, "x"),
+    ]
+
+def getUserInfo(username):
+    for i in range(len(users)):
+        if users[i].name == username:
+            if input("Account found! What is your pin?: ") == str(users[i].pin):
+                print(users[i].data)
+                return
+            
+            else:
+                print("Incorrect pin.")
+            
+            
+    print("Account not found")
+    
+
+def runApp():
+    if input("Hello! Do you have an account? Y/N: ") == "Y":
+        getUserInfo(input("What is your username?: "))
+        
+    else:
+        print("No")
+        
+runApp()
