@@ -1,0 +1,15 @@
+def checkPalendrome():
+    sentence = input("Input a sentence: ")
+    
+    reversedSentence = ""
+    
+    for i in range(len(sentence)):
+        reversedSentence += sentence[len(sentence) - (i + 1)]
+        
+    if sentence == reversedSentence:
+        print("This is a palendrome")
+            
+    else:
+        print("This is not a palendrome")
+
+checkPalendrome()
