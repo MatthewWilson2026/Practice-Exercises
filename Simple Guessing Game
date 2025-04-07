@@ -1,0 +1,20 @@
+import random
+def playGuessingGame():
+    minNum = 0
+    maxNum = 9
+    num = random.randint(minNum, maxNum)
+    userInput = input("Guess a number (or EXIT to quit): ")
+    while userInput != "EXIT":
+        userInput = input("Guess another number (or EXIT to quit): ")
+        if int(userInput) == num:
+            print("Correct!")
+            userInput = input("Want to play again? Y/N: ")
+            if userInput == "N":
+                userInput = "EXIT"
+            else:
+                num = random.randint(minNum, maxNum)
+            
+    
+    print("Game Exited")
+    
+playGuessingGame()
